@@ -17,17 +17,21 @@ public class Runner6 {
             price = scanner.nextDouble();
         }
 
-        if (price < 50){
+        //1 вариант
+        if (price < 50) {
             System.out.println("Недостаточная сумма для скидки");
-        }else {
-            if(price>50 && price<100 ){
-                sale = price *1/100;
+        } else {
+            if (price > 50 && price < 100) {
+                sale = price * 1 / 100;
                 System.out.println("Скидка 1%, составляет:" + sale);
-            }else {
-                sale = price *3/100;
+            } else {
+                sale = price * 3 / 100;
                 System.out.println("Скидка 3%, составляет:" + sale);
             }
         }
 
+        //2 вариант
+        sale = (price < 50) ? 0 : (price > 50 && price < 100 ? price * 0.01 : price * 0.03);
+        System.out.println("Скидка: " + sale);
     }
 }
