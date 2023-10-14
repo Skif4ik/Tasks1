@@ -9,7 +9,7 @@ public class Runner2 {
         }
 
 
-        //.for
+        //.forech
         System.out.println("==========================");
 
         for (String arg : args) {
